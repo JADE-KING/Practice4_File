@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yelia.practice4_file.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textStudentNo"
+        android:text="学号："
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textName"
+        android:text="姓名："
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/editName"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textGender"
+        android:text="性别："
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/radioGroupGender"
+        android:layout_marginTop="6dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBirthday"
+        android:text="生日："
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/textShowBirthday"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNo"
+        android:hint="学号"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/textStudentNo"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:hint="姓名"
+        android:textSize="18sp"
+        android:layout_below="@id/editNo"
+        android:layout_alignLeft="@id/editNo"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupGender"
+        android:textSize="18sp"
+        android:orientation="horizontal"
+        android:layout_below="@id/editName"
+        android:layout_alignLeft="@id/editNo"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonMale"
+            android:text="男"
+            android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonFemale"
+            android:text="女"
+            android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textShowBirthday"
+        android:text="选择日期->"
+        android:textSize="18sp"
+        android:layout_below="@id/radioGroupGender"
+        android:layout_alignLeft="@id/editNo"
+        android:layout_toLeftOf="@+id/btnSelectDate"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="4dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSelectDate"
+        android:text="选择日期"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_below="@id/radioGroupGender"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnWrite"
+        android:text="保存"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_below="@id/btnSelectDate"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRead"
+        android:text="读取"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_alignTop="@id/btnWrite"
+        android:layout_toLeftOf="@id/btnWrite"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDisplayInformation"
+        android:layout_below="@id/btnWrite"
+        android:text="信息显示："
+        android:textSize="18sp"
+        />
+
+</RelativeLayout>
